@@ -1,19 +1,18 @@
 pipeline {
-
     agent any
 
     stages {
-        stage ('build') {
+        stage('build') {
             steps {
-                echo 'build stage'
-            }
+                sh 'git clone https://github.com/IrfanNazeeer/IndexFile.git'
+             }
         }
-         stage ('test') {
+        stage('test') {
             steps {
                 echo 'tesing stage'
             }
-        }
-         stage ('deploy') {
+          }
+        stage('deploy') {
             steps {
                 echo 'deploying stage'
             }
